@@ -8,7 +8,8 @@ from typing_extensions import TypedDict
 from typing import Annotated
 from langgraph.types import Command, interrupt
 from langgraph.checkpoint.memory import InMemorySaver
-from agent_demo.make_coffee_demo import show_graph
+from utils import show_graph
+
 
 #合并温度值的方式，取其大者
 def updateTempreture(left, right):
@@ -154,9 +155,9 @@ def buildGraph6():
 if __name__ == "__main__":
     heatWaterSubGraph,addSugurSubGraph,graph = buildGraph6()
     #打印图
-    show_graph.showGraphInCode(heatWaterSubGraph,"./pic/烧热水子图.jpg")
-    show_graph.showGraphInCode(addSugurSubGraph,"./pic/加糖子图.jpg")
-    show_graph.showGraphInCode(graph,"./pic/总图.jpg")
+    show_graph.showGraphInCode(heatWaterSubGraph, "/Users/erainm/Documents/application/dev/workSpace/agent_project/agent_demo/make_coffee_demo/pic/烧热水子图.jpg")
+    show_graph.showGraphInCode(addSugurSubGraph, "/Users/erainm/Documents/application/dev/workSpace/agent_project/agent_demo/make_coffee_demo/pic/加糖子图.jpg")
+    show_graph.showGraphInCode(graph, "/Users/erainm/Documents/application/dev/workSpace/agent_project/agent_demo/make_coffee_demo/pic/总图.jpg")
 
     #初始化状态
     state:State = {"水温": 58,"产物":"凉水","咖啡固体":"咖啡豆"}

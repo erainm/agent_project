@@ -100,8 +100,9 @@ def buildGraph1():
 if __name__ == "__main__":
     graph = buildGraph1()
     # 打印图
-    from agent_demo.make_coffee_demo import show_graph
-    show_graph.showGraphInCode(graph, "./pic/make_coffee_parallel.jpg")
+    from utils import show_graph
+
+    show_graph.showGraphInCode(graph, "/Users/erainm/Documents/application/dev/workSpace/agent_project/agent_demo/make_coffee_demo/pic/make_coffee_parallel.jpg")
     # 调用图
     state:State = {"水温": 28,"产物":"凉水","咖啡固体":"咖啡豆"}
     result = graph.invoke(state)

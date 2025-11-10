@@ -298,9 +298,9 @@ def buildGraph():
 if __name__ == "__main__":
     graph = buildGraph()
 
-    from agent_demo.make_coffee_demo import show_graph
+    from utils import show_graph
 
-    show_graph.showGraphInCode(graph, "./pic/car_designer_v2_demo03.jpg")
+    show_graph.showGraphInCode(graph, "/Users/erainm/Documents/application/dev/workSpace/agent_project/car_designer_demo/pic/car_designer_v2_demo03.jpg")
 
     state: State = {}
     result = graph.invoke(state)

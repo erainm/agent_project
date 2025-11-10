@@ -47,8 +47,9 @@ def buildGraph():
 if __name__ == "__main__":
     graph = buildGraph()
     #打印图
-    from agent_demo.make_coffee_demo import show_graph
-    show_graph.showGraphInCode(graph, "./pic/make_coffee_loop.jpg")
+    from utils import show_graph
+
+    show_graph.showGraphInCode(graph, "/Users/erainm/Documents/application/dev/workSpace/agent_project/agent_demo/make_coffee_demo/pic/make_coffee_loop.jpg")
     #调用图
     state:State = {"water_temperature": 28,"product":"没烧开的水"}
     result = graph.invoke(state)
